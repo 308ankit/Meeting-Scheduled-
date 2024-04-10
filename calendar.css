@@ -1,0 +1,95 @@
+#calendar {
+    width: 400px;
+    margin: 0 auto;
+    position: relative; /* Make sure the calendar is positioned relative */
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#days {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 5px;
+    text-align: left;
+    border: none;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(7n+1) th {
+    border-top: 1px solid black;
+}
+
+tr:nth-child(n+2) td:first-child,
+tr:nth-child(n+2) th:first-child {
+    border-left: 1px solid black;
+}
+
+tr:last-child td:last-child,
+tr:last-child th:last-child {
+    border-bottom: 1px solid black;
+}
+
+td:last-child,
+th:last-child {
+    border-right: 1px solid black;
+}
+
+#selected-date {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+}
+
+#timing-slots {
+    position: absolute;
+    top: calc(100% + 20px); /* Position below the selected date */
+    right: 10px; /* Position on the right side */
+    width: 200px; /* Set width for the time slots */
+}
+
+.timing-slot {
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    color: aqua;
+    border-color: aqua;
+}
+
+#selected-date-text {
+    position: absolute;
+    top: calc(100% + 20px); /* Position below the selected date */
+    right: 220px; /* Position on the right side of the time slots */
+}
+
+.btn-primary {
+    background-color: blue; /* Change the color to your desired primary color */
+    color: white; /* Set text color to contrast with the background */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 20px; /* Remove border */
+    cursor: pointer; /* Add cursor pointer on hover */
+    
+}
+
+.btn-primary:hover {
+    background-color: darkblue; /* Change background color on hover */
+}
